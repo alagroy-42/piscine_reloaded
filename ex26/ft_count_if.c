@@ -1,17 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alagroy- <alagroy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 15:31:15 by alagroy-          #+#    #+#             */
-/*   Updated: 2018/10/29 15:31:18 by alagroy-         ###   ########.fr       */
+/*   Created: 2018/10/29 15:46:23 by alagroy-          #+#    #+#             */
+/*   Updated: 2018/10/29 15:46:28 by alagroy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int ft_count_if(char **tab, int (*f)(char *))
 {
-	*div = a / b;
-	*mod = a % b;
+	int i;
+	int count;
+
+	count = 0;
+	i = -1;
+	while (tab[++i])
+		if (f(tab[i]))
+			count++;
+	return (count);
 }

@@ -1,17 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alagroy- <alagroy-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/29 15:31:15 by alagroy-          #+#    #+#             */
-/*   Updated: 2018/10/29 15:31:18 by alagroy-         ###   ########.fr       */
+/*   Created: 2018/10/29 15:34:46 by alagroy-          #+#    #+#             */
+/*   Updated: 2018/10/29 15:34:48 by alagroy-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int ft_sqrt(int nb)
 {
-	*div = a / b;
-	*mod = a % b;
+	int i;
+	int tmp;
+
+	tmp = nb / 2;
+	i = -1;
+	if (nb == 1)
+		return (1);
+	while (++i <= tmp)
+		if (i * i == nb)
+			return (i);
+	return (0);
 }
